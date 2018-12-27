@@ -23,10 +23,15 @@ public class Recursion{
    public static int Fibonacci(int n){
       int a = 1;
       int b = 1;
-      int sum = 0;
-      for(int i = 3; i <= n;i ++){
-         a
-   
+      for(int i = 3; i <= n; i ++){
+         if(i == n)
+            return a + b;
+         int temp = b;
+         b += a;
+         a = b;
+      }
+      return 1;
+   }
    //part4: fibonacci sequence recursion
    public static int Fibonacci(int n) {
         if (n == 1 || n == 2) {
